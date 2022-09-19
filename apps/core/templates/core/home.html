@@ -1,0 +1,193 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/scss/base.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/global.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/scss/forms/form.css' %}" type="text/css">
+<script rel="stylesheet" src="{% static '/js/home.js' %}" type="text/javascript"></script>
+
+
+<div class="cover" id="cover">
+    <img src="{% static 'images/other/cover-line2.png' %}" alt="" class="cover-line" id="coverLine">
+    <div class="content">
+        <!-- <h1 style="pointer-events: none;" class="background-text">Bogdan<br>Trohanel</h1> -->
+        <div class="text">
+            <h1 id="coverHeading">Full-stack <br>
+                <span id="coverHeadingSpan">junior developer</span>
+            </h1>
+            <p id="coverParagraph" class="paragraph">A self learned web developer that has an eye for web design and is a quick learner. Living in Norway and being 17 years old, you have a many opportunities on what you want to become, I chose to be a web developer</p>
+        </div>
+        <div class="social-icons" id="socialIcons">
+            <div class="icons">
+                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-instagram"></i>
+                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="cover-actions" id="coverCTAS">
+            <button class="primary" onclick="aboutMeScroll()">About me</button>
+            <button class="secondary" onclick="myWorkScroll()">My work</button>
+        </div>
+        <div class="memoji" id="memoji">
+            <p class="paragraph">Me <span></span></p>
+            <img src="{% static 'images/other/memoji.png' %}" alt="">
+        </div>
+    </div>
+</div>
+<div class="about-me" id="aboutMe" style="opacity: 0; transform: translateX(-150px); padding-top: 100px; margin-top: -100px;">
+    <div class="content">
+        <div class="text">
+            <p class="headingp">who am i?</p>
+            <h1>About me</h1>
+        </div>
+        <div class="about-me-info">
+            <div class="image">
+                <div class="img-border"></div>
+                <img src="{% static 'images/other/green-lights.jpg' %}" alt="">
+            </div>
+            <p class="paragraph">I find fun in building websites, and when I build websites, I usually use Python/Django as my backend. Most of the projects I have done er eCommerce stores, and for that I have tried using Vue and Htmx, and ofcourse a lot of Python. When it comes to frontend, I would say that is my biggest strenght. Web design is also a thing I got quite good at, but there is place for improvements.</p>
+        </div>
+    </div>
+</div>
+<div class="skills" id="whatIDo" style="padding-top: 100px; margin-top: -100px;">
+    <div class="content">
+        <div class="text" id="skillsText" style="opacity: 0;">
+            <p class="headingp">skills</p>
+            <h1>What I do</h1>
+        </div>
+        <div class="cards">
+            <div class="skill" id="html">
+                <div class="row-one">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="row-two">
+                    <p class="heading">Html</p>
+                    <p class="small-paragraph">In the begining of my codin career, html looked like a bunch of words put togheter, and after struggle, I finally understood it by always finding the problem in the code myself</p>
+                </div>
+            </div>
+            <div class="skill" id="css">
+                <div class="row-one">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <div class="row-two">
+                    <p class="heading">CSS</p>
+                    <p class="small-paragraph">Css is my favourite language. It is simple, easy to see erros, and I use Scss, so that makes building websites 10x faster</p>
+                </div>
+            </div>
+            <div class="skill" id="javascript">
+                <div class="row-one">
+                    <i class="fa-brands fa-js" style="font-size: 44px;"></i>
+                </div>
+                <div class="row-two">
+                    <p class="heading">JavaScript</p>
+                    <p class="small-paragraph">When I first found out about JavaScript, I took a look into into it, and I.... was schocked! I thougt I would never learn JavaScript. After many hours and a lot of searches on stackeroverflow, I started to understand more</p>
+                </div>
+            </div>
+            <div class="skill" id="python">
+                <div class="row-one">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                <div class="row-two">
+                    <p class="heading">Python/Django</p>
+                    <p class="small-paragraph">Python is a language that takes years to understand even 50% of it. When it comes to using Python in web development, you need to use Django. Luckily, Django is easy to get the hang ofr</p>
+                </div>
+            </div>
+            <div class="skill" id="react">
+                <div class="row-one">
+                    <i class="fa-brands fa-react"></i>
+                </div>
+                <div class="row-two">
+                    <p class="heading">React</p>
+                    <p class="small-paragraph">React is a JavaScript library. I have recently started to work with React, and I am looking forward to learning more!</p>
+                </div>
+            </div>
+            <div class="skill" id="vue">
+                <div class="row-one">
+                    <i class="fa-brands fa-vuejs"></i>
+                </div>
+                <div class="row-two">
+                    <p class="heading">Vue</p>
+                    <p class="small-paragraph">My first ever eCommerce store was made using Django and Vue, even though I looked at a youtube tutorial, I still understood and got to learn Vue and how it works. Vue is a language I want to learn more in the future</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="my-work" id="myWork" style="opacity: 0; padding-top: 100px; margin-top: -100px;">
+    <div class="content">
+        <div class="text">
+            <p class="headingp">projects</p>
+            <h1>Take a look at my work</h1>
+        </div>
+        <div class="projects">
+            <div class="project" onclick="window.location.href='/projects/webiser'">
+                <p class="heading">Webiser</p>
+                <p class="small-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem commodi ullam nostrum dolores soluta omnis minus, debitis eos hic illo, rem esse! Non soluta odio voluptates ipsum, consequatur repellendus laborum.</p>
+                <a href="/projects/webiser">Read more</a>
+            </div>
+            <div class="project" onclick="window.location.href='projects/stellcare'">
+                <p class="heading">StellCare</p>
+                <p class="small-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem commodi ullam nostrum dolores soluta omnis minus, debitis eos hic illo, rem esse! Non soluta odio voluptates ipsum, consequatur repellendus laborum.</p>
+                <a href="/projects/stellcare">Read more</a>
+            </div>
+            <div class="project">
+                <p class="heading">GGLhmr</p>
+                <p class="small-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem commodi ullam nostrum dolores soluta omnis minus, debitis eos hic illo, rem esse! Non soluta odio voluptates ipsum, consequatur repellendus laborum.</p>
+                <a href="">Read more</a>
+            </div>
+            <div class="project">
+                <p class="heading">GGLhmr</p>
+                <p class="small-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem commodi ullam nostrum dolores soluta omnis minus, debitis eos hic illo, rem esse! Non soluta odio voluptates ipsum, consequatur repellendus laborum.</p>
+                <a href="">Read more</a>
+            </div>
+            <div class="project">
+                <p class="heading">GGLhmr</p>
+                <p class="small-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem commodi ullam nostrum dolores soluta omnis minus, debitis eos hic illo, rem esse! Non soluta odio voluptates ipsum, consequatur repellendus laborum.</p>
+                <a href="">Read more</a>
+            </div>
+            <div class="project">
+                <p class="heading">GGLhmr</p>
+                <p class="small-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem commodi ullam nostrum dolores soluta omnis minus, debitis eos hic illo, rem esse! Non soluta odio voluptates ipsum, consequatur repellendus laborum.</p>
+                <a href="">Read more</a>
+            </div>
+            <div class="project">
+                <p class="heading">GGLhmr</p>
+                <p class="small-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem commodi ullam nostrum dolores soluta omnis minus, debitis eos hic illo, rem esse! Non soluta odio voluptates ipsum, consequatur repellendus laborum.</p>
+                <a href="">Read more</a>
+            </div>
+            <div class="project">
+                <p class="heading">GGLhmr</p>
+                <p class="small-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem commodi ullam nostrum dolores soluta omnis minus, debitis eos hic illo, rem esse! Non soluta odio voluptates ipsum, consequatur repellendus laborum.</p>
+                <a href="">Read more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contact-us page-for-form" id="contactForm" style="opacity: 0; transform: translateX(-200px); padding-top: 100px; margin-top: -100px;">
+    <img src="{% static 'images/other/purple-sky.jpg' %}" alt="" class="contact-us-img">
+    <form id="contactUs" action="" method="POST">
+       <h1 class="heading">Let's get started!</h1>
+        {% csrf_token %}
+        <br>
+        <div class="inputs-labels">
+           <label for="navn">Name</label>
+           <br>
+           <input type="text" name="navn" required oninvalid="this.setCustomValidity('Værsåsnill, skriv inn navn')" oninput="this.setCustomValidity('')">
+           <br>
+           <br>
+           <label for="email">Email</label>
+           <br>
+           <input type="email" name="email" required oninvalid="this.setCustomValidity('Værsåsnill, skirv inn epost')" oninput="this.setCustomValidity('')">
+           <br>
+           <br>
+           <label for="message">Got anything to tell me?</label>
+           <br>
+           <textarea name="message" required oninvalid="this.setCustomValidity('Værsåsnill, skriv inn beskjed')" oninput="this.setCustomValidity('')"></textarea>
+          </div>
+        <div class="form-actions">
+          <button type="submit" name="contact" value="contact" class="primary">Send email</button>
+        </div>
+      </form>
+   </div>
+{% endblock %}
