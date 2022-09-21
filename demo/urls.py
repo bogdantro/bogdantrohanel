@@ -11,5 +11,7 @@ urlpatterns = [
         # Projects
     path('projects/webiser', project_webiser, name='project_webiser'),
     path('projects/stellcare', project_stellcare, name='project_stellcare'),
+        # Tests
+    path('test1', test1, name='test1'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
