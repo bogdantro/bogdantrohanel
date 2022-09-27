@@ -50,5 +50,5 @@ def project_webiser(request):
 def project_stellcare(request):
     return render(request, 'pages/projects/stellcare.html')
 
-def test1(request):
-    return render(request, 'pages/tests/test1.html')    
+def project_gglhmr(request):
+    return render(request, 'pages/projects/gglhmr.html')

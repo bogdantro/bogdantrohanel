@@ -1,6 +1,7 @@
 .cover {
   width: 100%;
-  height: 700px;
+  height: 100vh;
+  min-height: 700px;
   background: transparent;
   transition: 2s;
   position: relative;
@@ -18,7 +19,7 @@
   height: 100%;
   text-align: left;
   padding-inline: 20px;
-  padding-top: 97px;
+  padding-top: 94px;
   position: relative;
 }
 .cover .content .background-text {
@@ -167,7 +168,7 @@
   top: -40px;
   height: 200px;
   width: 200px;
-  border: 1px solid rgba(163, 74, 226, 0.4666666667);
+  border: 2px solid rgba(163, 74, 226, 0.4666666667);
 }
 .about-me .content .about-me-info .image img {
   position: relative;
@@ -325,7 +326,7 @@
     width: 100%;
     height: auto;
     text-align: left;
-    transform: translateY(90px);
+    transform: translateY(80px);
     padding-inline: 5px;
     position: relative;
   }
@@ -446,18 +447,18 @@
     padding-inline: 20px;
   }
   .about-me .content .text {
-    text-align: left;
+    text-align: center;
   }
   .about-me .content .text .headingp {
     color: #a34ae2;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 1px;
     opacity: 0.9;
     margin-bottom: 25px;
   }
   .about-me .content .text h1 {
-    font-size: 31px;
+    font-size: 37px;
     color: #F9F6EE;
     padding: 5px;
     font-weight: 800;
@@ -494,7 +495,7 @@
     top: -40px;
     height: 300px;
     width: 300px;
-    border: 1px solid rgba(163, 74, 226, 0.4666666667);
+    border: 2px solid rgba(163, 74, 226, 0.4392156863);
   }
   .about-me .content .about-me-info .image img {
     position: relative;
@@ -526,7 +527,7 @@
   }
   .skills .content .text h1 {
     text-align: center;
-    font-size: 34px;
+    font-size: 37px;
     color: #F9F6EE;
     font-weight: 800;
     border: none;
@@ -601,7 +602,7 @@
     margin-bottom: 25px;
   }
   .my-work .content .text h1 {
-    font-size: 34px;
+    font-size: 37px;
     color: #F9F6EE;
     font-weight: 800;
   }
@@ -616,6 +617,7 @@
     flex-shrink: 0;
     width: 230px;
     height: 100%;
+    max-height: 350px;
     padding: 17px 13px;
     border: 2px solid #a34ae2;
     margin-inline: 15px;
@@ -633,6 +635,12 @@
     margin-block: 15px;
     margin-top: 5px;
     color: #F9F6EE;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /* number of lines to show */
+    line-clamp: 8;
+    -webkit-box-orient: vertical;
   }
   .my-work .content .projects .project a {
     color: #F9F6EE;

@@ -101,11 +101,11 @@ button.secondary:hover {
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  background-color: rgb(60, 84, 160);
+  background-color: #183B56;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 100000;
+  z-index: 10000000000000000000000000000;
   opacity: 1;
   pointer-events: none;
   display: flex;
@@ -117,6 +117,7 @@ button.secondary:hover {
 }
 .load-wrapp.hidden {
   opacity: 0;
+  left: -1110px;
 }
 .load-wrapp .load-wrapp p {
   padding: 0 0 20px;

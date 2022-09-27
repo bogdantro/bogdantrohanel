@@ -35,7 +35,7 @@ $(document).ready(function(){
         var height1 = $("#aboutMe").outerHeight();
         var y = document.documentElement.scrollTop;
         var z = ((x.top + height1) - y);
-        if(z - 530 < $(window).height()){
+        if(z - 50 < $(window).height()){
             $('#aboutMe').css({
                 'opacity': '1',
                 'transform': 'translateX(0)',
@@ -61,7 +61,7 @@ $(document).ready(function(){
         var height1 = $("#skillsText").outerHeight();
         var y = document.documentElement.scrollTop;
         var z = ((x.top + height1) - y);
-        if(z + 70 < $(window).height()){
+        if(z + 100 < $(window).height()){
             $('#skillsText').css({
                 'opacity': '1',
             })
