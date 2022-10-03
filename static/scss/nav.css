@@ -5,7 +5,7 @@
 #mobileNav {
   width: 100%;
   max-width: 1150px;
-  height: 60px;
+  height: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,60 +16,63 @@
   transition: 0.2s;
   background: transparent;
 }
-#mobileNav::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -300px;
-  bottom: -4px;
-  background: rgba(151, 56, 218, 0.4745098039);
-  width: 100%;
-  height: 2px;
-  transition: 0.3s;
-  opacity: 0;
-}
-#mobileNav.sticky {
-  background-color: rgba(24, 59, 86, 0.8) !important;
-}
-#mobileNav.sticky::after {
+#mobileNav::before {
   content: "";
   display: block;
   position: absolute;
   left: 0;
-  bottom: -4px;
-  background: rgba(151, 56, 218, 0.4745098039);
+  top: -50px;
+  background: #F9F6EE;
   width: 100%;
-  height: 2px;
+  height: 100%;
+  transition: 0.3s;
+  opacity: 0;
+}
+#mobileNav.sticky::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #F9F6EE;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
   opacity: 1;
 }
-#mobileNav.active {
-  background: #183b56 !important;
+#mobileNav.sticky .hamburger span {
+  background: #183b56;
 }
-#mobileNav .logo {
-  font-size: 23px;
-  letter-spacing: -1.7px;
-  color: #F9F6EE;
-  transition: 0.2s;
+#mobileNav.sticky .logo {
+  color: #183b56;
 }
-#mobileNav .logo span {
-  font-size: 12px;
-  font-weight: normal;
-  letter-spacing: normal;
-  border-bottom: 1px solid #F9F6EE;
-  padding-bottom: 2px;
+#mobileNav.sticky .order a {
+  background: linear-gradient(to bottom right, #0088F9, #1493fa);
 }
-#mobileNav .message {
+#mobileNav.active::before {
+  content: "";
+  display: block;
   position: absolute;
-  right: 80px;
-  transform: translateY(4px);
+  left: 0;
+  top: 0;
+  background: #F9F6EE;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  opacity: 1;
 }
-#mobileNav .message i {
-  transition: 0.2s;
-  color: #F9F6EE;
-  font-size: 26px;
+#mobileNav.active .hamburger span {
+  background: #183b56;
 }
-#mobileNav .hamburger {
-  transform: translateY(3.5px);
+#mobileNav.active .logo {
+  color: #183b56;
+}
+#mobileNav.active .order a {
+  background: linear-gradient(to bottom right, #0088F9, #1493fa);
+}
+#mobileNav .nav-row {
+  display: flex;
+  align-items: center;
 }
 #mobileNav .hamburger.active span {
   transition: 0.5s;
@@ -85,12 +88,12 @@
   height: 3px;
   width: 24px;
   background: #F9F6EE;
-  border-radius: 3px;
   display: block;
   margin-block: 6px;
   transform: translateX(0) rotate(0);
   text-align: center;
   transform-origin: center center;
+  border-radius: 20px;
 }
 #mobileNav .hamburger .upper-span {
   width: 16px;
@@ -98,18 +101,49 @@
 #mobileNav .hamburger .lower-span {
   width: 30px;
 }
+#mobileNav .logo {
+  font-size: 23px;
+  letter-spacing: -1.7px;
+  color: #F9F6EE;
+  transition: 0.2s;
+  position: absolute;
+  left: 68px;
+}
+#mobileNav .logo span {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: normal;
+  border-radius: 100%;
+}
+#mobileNav .order {
+  z-index: 100000;
+}
+#mobileNav .order a {
+  color: #F9F6EE;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
 #mobileNav .sidebar {
-  background: #183b56;
+  background: #F9F6EE;
   height: 100vh;
   position: absolute;
-  top: 60px;
-  right: 0px;
+  top: 65px;
+  left: -250px;
   width: 100%;
   z-index: 120;
   opacity: 0;
   pointer-events: none;
   display: unset;
   transition: 0.2s;
+}
+#mobileNav .sidebar.active {
+  top: 65px;
+  left: 0;
+  opacity: 1;
+  pointer-events: visible;
+  transition: 0.5s;
 }
 #mobileNav .sidebar .sidebar-ul {
   position: relative;
@@ -123,7 +157,7 @@
   width: 100%;
 }
 #mobileNav .sidebar .sidebar-ul .sidebar-li a {
-  color: #F9F6EE;
+  color: #183b56;
   display: inline-block;
   text-decoration: none;
   width: 100%;
@@ -135,14 +169,14 @@
   cursor: pointer;
 }
 #mobileNav .sidebar .sidebar-ul .sidebar-li a:active {
-  background: rgba(151, 56, 218, 0.1450980392);
+  background: rgba(0, 137, 249, 0.1294117647);
 }
 #mobileNav .sidebar .sidebar-ul .sidebar-li a::after {
   content: "";
   display: block;
   height: 1px;
   width: 100%;
-  background: rgba(200, 200, 200, 0.17);
+  background: rgba(200, 200, 200, 0.411);
   transform: translateY(19px) translateX(0);
   position: absolute;
   left: 0;
@@ -156,11 +190,6 @@
   transition: 0.2s !important;
   float: right;
 }
-#mobileNav .sidebar.active {
-  opacity: 1;
-  pointer-events: visible;
-  transition: 0.5s;
-}
 
 @media only screen and (min-device-width: 1150px) {
   #mobileNav {
@@ -168,8 +197,8 @@
   }
   #desNav {
     width: 100%;
-    max-width: 1150px;
-    height: 65px;
+    max-width: 100%;
+    height: 68px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,51 +208,81 @@
     top: 0;
     z-index: 10000000000000000000;
     transition: 0.2s;
-    padding-inline: 5px;
+    background: transparent;
+    padding-inline: 0;
+    padding-block: 10px;
   }
-  #desNav::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -300px;
-    bottom: -4px;
-    background: rgba(151, 56, 218, 0.4745098039);
-    width: 100%;
-    height: 2px;
-    transition: 0.3s;
-    opacity: 0;
-  }
-  #desNav.sticky {
-    background-color: rgba(24, 59, 86, 0.8) !important;
-  }
-  #desNav.sticky::after {
+  #desNav::before {
     content: "";
     display: block;
     position: absolute;
     left: 0;
-    bottom: -4px;
-    background: rgba(151, 56, 218, 0.4745098039);
+    top: -50px;
+    background: #F9F6EE;
     width: 100%;
-    height: 2px;
+    height: 100%;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  #desNav .width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1150px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #desNav.sticky {
+    background: transparent;
+  }
+  #desNav.sticky::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(249, 246, 238, 0.8549019608);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
     opacity: 1;
   }
+  #desNav.sticky .menu a {
+    color: #183b56;
+  }
+  #desNav.sticky .menu a:hover {
+    border-color: #0088F9;
+  }
+  #desNav.sticky .menu a:last-child {
+    color: white !important;
+  }
+  #desNav.sticky .menu a:last-child:hover {
+    background: #0079db;
+    border-color: #0079db;
+  }
+  #desNav.sticky .logo {
+    color: #183b56;
+  }
+  #desNav.sticky .order a {
+    background: linear-gradient(to bottom right, #0088F9, #1493fa);
+  }
   #desNav .logo {
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: -1.7px;
     font-weight: 500;
     color: #F9F6EE;
-    transition: 0.2s;
+    transition: 0.4s;
     cursor: pointer;
-  }
-  #desNav .logo.active {
-    transition: 0.5s;
   }
   #desNav .logo span {
     font-size: 12px;
     font-weight: normal;
     letter-spacing: normal;
-    border-bottom: 1px solid #9638da;
-    padding-bottom: 2px;
+  }
+  #desNav .logo:hover {
+    transform: scale(1.1);
   }
   #desNav .menu {
     width: -webkit-max-content;
@@ -233,7 +292,7 @@
   }
   #desNav .menu a {
     color: #F9F6EE;
-    font-size: 16px;
+    font-size: 17px;
     padding-inline: 7px;
     padding-block: 26px;
     margin-inline: 16px;
@@ -250,18 +309,18 @@
     padding-left: 10px;
   }
   #desNav .menu a:last-child {
-    background: #a34ae2;
+    background: #1493fa;
     padding: 10px;
     border-radius: 4px;
     border: 2px solid transparent;
     margin-right: 0;
   }
   #desNav .menu a:last-child:hover {
-    background: transparent;
-    border: 2px solid #a34ae2;
+    border-bottom: 2px solid transparent;
+    background: #279eff;
   }
   #desNav .menu a:hover {
-    border-bottom: 2px solid #a34ae2;
+    border-bottom: 2px solid #F9F6EE;
   }
   #desNav .menu a:active {
     border-bottom: 2px solid transparent;

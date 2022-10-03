@@ -2,8 +2,15 @@
   width: 100%;
   height: 100%;
   padding-block: 8px;
-  background-color: transparent;
+  padding-top: 16px;
+  background: #183b56;
   position: relative;
+  border-top: 1px solid #F9F6EE;
+}
+#footer .content {
+  width: 100%;
+  max-width: 1150px;
+  margin: auto;
 }
 #footer .footerbottom {
   display: flex;
@@ -65,7 +72,7 @@
     width: auto;
     height: auto;
     position: absolute;
-    right: 64px;
+    right: 0;
   }
   #footer .footerbottom .social-icons .icons {
     display: flex;
@@ -81,7 +88,7 @@
   #footer .footerbottom .copyright {
     width: auto;
     position: absolute;
-    left: 75px;
+    left: 0;
   }
   #footer .footerbottom .copyright p {
     padding: auto;

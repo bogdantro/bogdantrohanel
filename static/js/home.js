@@ -11,19 +11,19 @@ window.onload = function(){
     }, 450);
     setTimeout(() => {
         document.getElementById('coverHeadingSpan').classList.add('active');
-    }, 550);
+    }, 450);
     setTimeout(() => {
         document.getElementById('coverParagraph').classList.add('active');
-    }, 650);
+    }, 450);
     setTimeout(() => {
-        document.getElementById('socialIcons').classList.add('active');
-    }, 750);
+        document.getElementById('border').classList.add('active');
+    }, 450);
     setTimeout(() => {
-        document.getElementById('coverCTAS').classList.add('active');
-    }, 950);
+        document.getElementById('desCoverCTAS').classList.add('active');
+    }, 450);
     setTimeout(() => {
-        document.getElementById('memoji').classList.add('active');
-    }, 750);
+        document.getElementById('mobCoverCTAS').classList.add('active');
+    }, 450);
 }
 
 

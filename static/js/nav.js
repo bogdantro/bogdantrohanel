@@ -28,20 +28,6 @@ function menu(){
 }
 
 
-function aboutMeScroll(){
-    const navbar = document.getElementById('mobileNav');
-    const hamburger = document.getElementById('hamburger');
-    const sidebar = document.getElementById('sidebar');
-    const logo = document.getElementById('logo');
-
-    sidebar.classList.remove('active');
-    hamburger.classList.remove('active');
-    navbar.classList.remove('active');
-    logo.classList.remove('active');
-
-        window.location.href='#aboutMe';
-}
-
 function whatIDoScroll(){
     const navbar = document.getElementById('mobileNav');
     const hamburger = document.getElementById('hamburger');

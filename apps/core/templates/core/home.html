@@ -7,165 +7,107 @@
 <link rel="stylesheet" href="{% static '/scss/forms/form.css' %}" type="text/css">
 <script rel="stylesheet" src="{% static '/js/home.js' %}" type="text/javascript"></script>
 
-
 <div class="cover" id="cover">
-    <img src="{% static 'images/other/cover-line2.png' %}" alt="" class="cover-line" id="coverLine">
-    <div class="content">
-        <!-- <h1 style="pointer-events: none;" class="background-text">Bogdan<br>Trohanel</h1> -->
-        <div class="text">
-            <h1 id="coverHeading">Full-stack <br>
-                <span id="coverHeadingSpan">junior developer</span>
-            </h1>
-            <p id="coverParagraph" class="paragraph">A self learned web developer that builds highend websites from scratch</p>
-        </div>
-        <div class="social-icons" id="socialIcons">
-            <div class="icons">
-                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-instagram"></i>
-                <i onclick="window.location.href='https://www.instagram.com/webiser.no/'" class="fab fa-facebook"></i>
-                <i class="fa-brands fa-linkedin"></i>
+    <div class="border" id="border"></div>
+    <div class="width">
+        <div class="content">
+            <div class="text">
+                <h1 id="coverHeading">Professional <br>
+                <span id="coverHeadingSpan">websites for less</span>
+                </h1>
+                <p id="coverParagraph" class="paragraph">Whether you're looking for a personal website, portfolio or even an online store, you came to the right place!</p>
+            </div>
+            <div class="des-cover-actions" id="desCoverCTAS">
+                <button class="primary" onclick="window.location.href='#whatIDo'">What I do</button>
+                <button class="secondary" onclick="myWorkScroll()">My work</button>
             </div>
         </div>
-        <div class="cover-actions" id="coverCTAS">
-            <button class="primary" onclick="aboutMeScroll()">About me</button>
+        <div class="mob-cover-actions" id="mobCoverCTAS">
+            <button class="primary" onclick="window.location.href='#whatIDo'">What I do</button>
             <button class="secondary" onclick="myWorkScroll()">My work</button>
         </div>
-        <div class="memoji" id="memoji">
-            <p class="paragraph">Me <span></span></p>
-            <img src="{% static 'images/other/memoji.png' %}" alt="">
-        </div>
+        <div class="des-left-row"></div>
     </div>
 </div>
-<div class="about-me" id="aboutMe" style="opacity: 0; transform: translateX(-150px); padding-top: 100px; margin-top: -100px;">
+<div class="what-i-do" id="whatIDo" style="padding-top: 80px; margin-top: -80px;">
     <div class="content">
         <div class="text">
-            <p class="headingp">who am i?</p>
-            <h1>About me</h1>
+            <p class="headingp">What i do</p>
+            <h1 class="heading">It's time to go <br> <span>online!</span></h1>
+            <p class="paragraph">All websites come with the option to host your website online (cPanel) for only 200kr/19$/19€ per month. Price of web hosting can be discussed</p>
         </div>
-        <div class="about-me-info">
-            <div class="image">
-                <div class="img-border"></div>
-                <img src="{% static 'images/other/green-lights.jpg' %}" alt="">
-            </div>
-            <p class="paragraph">
-                Hey, I'm a 17 year old living in Norway, that learned how to code, and now I build full-stack websites for fun.
-                With over 2.5 years of <span style="text-decoration: underline;">active</span> experience, I have leared a lot from my successes, but also from my mistakes.
-                I can do either short-term and long-term work.
-            </p>
-        </div>
-    </div>
-</div>
-<div class="skills" id="whatIDo" style="padding-top: 100px; margin-top: -100px;">
-    <div class="content">
-        <div class="text" id="skillsText" style="opacity: 0;">
-            <p class="headingp">skills</p>
-            <h1>What I do</h1>
-        </div>
-        <div class="cards">
-            <div class="skill" id="html">
-                <div class="row-one">
-                    <i class="fa-brands fa-html5"></i>
-                </div>
-                <div class="row-two">
-                    <p class="heading">Html</p>
-                    <p class="small-paragraph">Html was quite simple to learn. All I had to do was do a couple google searches :)</p>
+        <br>
+        <div class="flex">
+            <div class="card">
+                <div class="card-content" onclick="desPricesScroll()">
+                    <div class="icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="card-text">
+                        <h1>Portfolio</h1>
+                        <p>Having a portfolio has shown to bring you 85% more clients</p>
+                    </div>
                 </div>
             </div>
-            <div class="skill" id="css">
-                <div class="row-one">
-                    <i class="fa-brands fa-css3-alt"></i>
-                </div>
-                <div class="row-two">
-                    <p class="heading">CSS</p>
-                    <p class="small-paragraph">Css is my favourite language. It is simple, easy to see erros, and I use Scss, so that makes building websites 10x faster</p>
-                </div>
-            </div>
-            <div class="skill" id="javascript">
-                <div class="row-one">
-                    <i class="fa-brands fa-js" style="font-size: 44px;"></i>
-                </div>
-                <div class="row-two">
-                    <p class="heading">JavaScript</p>
-                    <p class="small-paragraph">When I first found out about JavaScript, I took a look into into it, and I.... was schocked! I thougt I would never learn JavaScript. After many hours and a lot of searches on stackeroverflow, I started to understand more</p>
+            <div class="card">
+                <div class="card-content" onclick="desPricesScroll()">
+                    <div class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="card-text">
+                        <h1>Personal site</h1>
+                        <p>A place where you can do whatever you want!</p>
+                    </div>
                 </div>
             </div>
-            <div class="skill" id="python">
-                <div class="row-one">
-                    <i class="fa-brands fa-python"></i>
-                </div>
-                <div class="row-two">
-                    <p class="heading">Python/Django</p>
-                    <p class="small-paragraph">Python is a language that takes years to understand even 50% of it. When it comes to using Python in web development, you need to use Django. Luckily, I got the hang of Django</p>
-                </div>
-            </div>
-            <div class="skill" id="react">
-                <div class="row-one">
-                    <i class="fa-brands fa-react"></i>
-                </div>
-                <div class="row-two">
-                    <p class="heading">React</p>
-                    <p class="small-paragraph">React is a JavaScript library. I have recently started to work with React, and I am looking forward to learning more!</p>
+            <div class="card">
+                <div class="card-content" onclick="desPricesScroll()">
+                    <div class="icon">
+                        <i class="fa-solid fa-blog"></i>
+                    </div>
+                    <div class="card-text">
+                        <h1>Blog</h1>
+                        <p>Perfect place to post your cooking recipes, workouts and much more!</p>
+                    </div>
                 </div>
             </div>
-            <div class="skill" id="vue">
-                <div class="row-one">
-                    <i class="fa-brands fa-vuejs"></i>
-                </div>
-                <div class="row-two">
-                    <p class="heading">Vue</p>
-                    <p class="small-paragraph">My first ever eCommerce store was made using Django and Vue, even though I looked at a youtube tutorial, I still understood and got to learn Vue and how it works. Vue is a language I want to learn more in the future</p>
+            <div class="card">
+                <div class="card-content" onclick="desPricesScroll()">
+                    <div class="icon">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <div class="card-text">
+                        <h1>Online store</h1>
+                        <p>Get started with an online store and start selling</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="my-work" id="myWork" style="opacity: 0; padding-top: 100px; margin-top: -100px;">
-    <div class="content">
-        <div class="text">
-            <p class="headingp">projects</p>
-            <h1>Take a look at my work</h1>
-        </div>
-        <div class="projects">
-            <div class="project" onclick="window.location.href='/projects/webiser'">
-                <p class="heading">Webiser</p>
-                <p class="small-paragraph">Webiser is my personal business, where I build eCommerce stores for customers. Webiser is a project I started in 10.02.21. The website includes: Log in/Log out/Sign up, Forum, Make an order, My account/My orders, Products, and it also has a admin dashboard. The design is quite simple and easy to navigate. Webiser is built in mostly Python/Django and JavaScript, and of course Html and Css/Scss</p>
-                <a href="/projects/webiser">Read more</a>
-            </div>
-            <div class="project" onclick="window.location.href='projects/stellcare'">
-                <p class="heading">StellCare</p>
-                <p class="small-paragraph">StellCare was my very first project. Started as my own eCommerce store, StellCare was made using Vue and Python, but I did watch a tutorial, even though, I learned a lot. As of now, I stopped working on StellCare, and have started on a new eCommerce store.</p>
-                <a href="/projects/stellcare">Read more</a>
-            </div>
-            <div class="project" onclick="window.location.href='projects/gglhmr'">
-                <p class="heading">GGLhmr</p>
-                <p class="small-paragraph">GG Lillehammer is a gaming local in Lillehammer, Norway. They are also one of my first clients, and they needed a quite complex website. All in all, the website had a beatifull design, and it had my account, make order, contact us and a blog page. The project came to a stop, since GG Lillehammer didn't have the finances required to run a website that big.</p>
-                <a href="">Read more</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="contact-us page-for-form" id="contactForm" style="opacity: 0; transform: translateX(-200px); padding-top: 100px; margin-top: -100px;">
-    <img src="{% static 'images/other/purple-sky.jpg' %}" alt="" class="contact-us-img">
+<div class="contact-us page-for-form" id="contactForm">
     <form id="contactUs" action="" method="POST">
+    <img src="{% static 'images/other/blue-lake.jpg' %}" alt="" class="contact-us-img">
        <h1 class="heading">Let's get started!</h1>
         {% csrf_token %}
         <br>
         <div class="inputs-labels">
-           <label for="navn">Name</label>
+           <label class="name" for="navn">Name</label>
            <br>
-           <input type="text" name="navn" required oninvalid="this.setCustomValidity('Værsåsnill, skriv inn navn')" oninput="this.setCustomValidity('')">
-           <br>
-           <br>
-           <label for="email">Email</label>
-           <br>
-           <input type="email" name="email" required oninvalid="this.setCustomValidity('Værsåsnill, skirv inn epost')" oninput="this.setCustomValidity('')">
+           <input class="name" type="text" name="navn" required oninvalid="this.setCustomValidity('Please enter your name')" oninput="this.setCustomValidity('')">
            <br>
            <br>
-           <label for="message">Got anything to tell me?</label>
+           <label class="email" for="email">Email</label>
            <br>
-           <textarea name="message" required oninvalid="this.setCustomValidity('Værsåsnill, skriv inn beskjed')" oninput="this.setCustomValidity('')"></textarea>
+           <input class="email" type="email" name="email" required oninvalid="this.setCustomValidity('Please enter your email')" oninput="this.setCustomValidity('')">
+           <br>
+           <br>
+           <label class="message" for="message">What are you looking for?</label>
+           <br>
+           <textarea class="message" name="message" required oninvalid="this.setCustomValidity('Please enter your message')" oninput="this.setCustomValidity('')"></textarea>
           </div>
         <div class="form-actions">
-          <button type="submit" name="contact" value="contact" class="primary">Send email</button>
+          <button type="submit" name="contact" value="contact" class="primary">Get started</button>
         </div>
       </form>
    </div>

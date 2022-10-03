@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-html {
-  margin: 0 auto;
-  max-width: 1150px;
-}
-
 .body {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
@@ -20,12 +15,15 @@ html {
 }
 
 html, body {
-  background-color: #183b56 !important;
+  background-color: #F9F6EE !important;
   overflow-x: hidden;
   scroll-behavior: smooth;
   margin: 0 auto;
 }
 
+p {
+  margin-bottom: 0;
+}
 p.paragraph {
   opacity: 0.8;
   box-sizing: border-box;
@@ -70,7 +68,7 @@ button {
   transition: 0.6s !important;
 }
 button.primary {
-  background: #a34ae2;
+  background: #1493fa;
   padding: 10px;
   border-radius: 4px;
   border: 2px solid transparent;
@@ -78,20 +76,22 @@ button.primary {
   color: #F9F6EE;
 }
 button.primary:hover {
-  background: transparent;
-  border: 2px solid #a34ae2;
+  transform: scale(1.1);
+  background: #279eff;
 }
 button.secondary {
   background: transparent;
   padding: 10px;
   border-radius: 4px;
-  border: 2px solid #a34ae2;
+  border: 2px solid #0088F9;
   margin-right: 0;
-  color: #F9F6EE;
+  color: #0088F9;
 }
 button.secondary:hover {
-  background: #a34ae2;
-  border: 2px solid #a34ae2;
+  background: #279eff;
+  border: 2px solid #279eff;
+  transform: scale(1.1);
+  color: #F9F6EE;
 }
 
 .load-wrapp {

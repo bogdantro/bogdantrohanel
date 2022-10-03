@@ -16,32 +16,40 @@
 
 
 <div id="mobileNav">
-    <div onclick="window.location.href='/'" id="logo" class="logo">Bogdan <span>Trohanel</span></div>
-    <div class="message">
-        <i onclick="contactMeScroll()" class="fa-solid fa-comment"></i>
+    <div class="left-row nav-row">
+        <div class="hamburger" id="hamburger" onclick="menu()">
+            <span class="upper-span"></span>
+            <span class="center-span"></span>
+            <span class="lower-span"></span>
+        </div>
+        <div onclick="window.location.href='/'" id="logo" class="logo">Bogdan <span>Trohanel</span></div>
     </div>
-    <div class="hamburger" id="hamburger" onclick="menu()">
-        <span class="upper-span"></span>
-        <span class="center-span"></span>
-        <span class="lower-span"></span>
+    <div class="right-row nav-row">
+        <div class="order">
+            <a onclick="contactMeScroll()">Get started</a>
+        </div>
     </div>
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-ul">
             <li class="sidebar-li" id="sidebarLi">
-                <a onclick="aboutMeScroll()">About me<i class="fa-solid fa-caret-right"></i></a>
                 <a onclick="whatIDoScroll()">What I do<i class="fa-solid fa-caret-right"></i></a>
                 <a onclick="myWorkScroll()">My work<i class="fa-solid fa-caret-right"></i></a>
+                <a onclick="myWorkScroll()">Prices<i class="fa-solid fa-caret-right"></i></a>
+                <a onclick="myWorkScroll()">Web hosting<i class="fa-solid fa-caret-right"></i></a>
             </li>   
         </ul>
     </div>
 </div>
 
 <div id="desNav">
-    <div title="Back to home page" onclick="window.location.href='/'" id="logo" class="logo">Bogdan <span>Trohanel</span></div>
-    <div class="menu">
-        <a href="#aboutMe">About me</a>
-        <a href="#whatIDo">What I do</a>
-        <a href="#myWork">My work</a>
-        <a href="#contactForm">Get in touch<i class="fa-solid fa-caret-right"></i></a>
+    <div class="width">
+        <div title="Back to home page" onclick="window.location.href='/'" id="logo" class="logo">Bogdan <span>Trohanel</span></div>
+        <div class="menu">
+            <a href="#whatIDo">What I do</a>
+            <a href="#myWork">My work</a>
+            <a href="#myWork">Prices</a>
+            <a href="#myWork">Web hosting</a>
+            <a href="#contactForm">Get in touch<i class="fa-solid fa-caret-right"></i></a>
+        </div>
     </div>
 </div>
