@@ -35,7 +35,7 @@
   padding-bottom: 55px;
   position: relative;
   text-align: center;
-  background: #0088F9;
+  background: linear-gradient(to right, #279eff, #0088F9);
   border-bottom: 10px solid transparent;
   border-bottom-right-radius: 43%;
 }
@@ -101,25 +101,25 @@
   height: 100%;
 }
 .what-i-do.active .text .paragraph {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-.what-i-do.active .flex {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+  opacity: 0.8 !important;
+  transform: translateX(0) !important;
 }
 .what-i-do .content {
   margin: auto;
   width: 100%;
   max-width: 1150px;
-  padding: 20px;
+  padding: 40px 0;
+  position: relative;
+  background: linear-gradient(to left, #279eff, #0088F9);
+  border-bottom: 10px solid transparent;
+  border-bottom-left-radius: 43%;
 }
 .what-i-do .content .text {
   text-align: center;
 }
 .what-i-do .content .text .headingp {
   font-size: 14px;
-  color: #0088F9;
+  color: #F9F6EE;
   opacity: 0.8;
   text-transform: uppercase;
   margin-bottom: 7px;
@@ -127,25 +127,78 @@
 .what-i-do .content .text .heading {
   margin-top: 10px;
   margin-bottom: 25px;
-  color: #183b56;
+  color: #F9F6EE;
   font-size: 37px;
   font-weight: 800;
+  padding-inline: 15px;
 }
 .what-i-do .content .text .heading span {
   padding-bottom: 5px;
   border-bottom: 2px solid #0088F9;
 }
 .what-i-do .content .text .paragraph {
+  transition: 1s;
+  color: #F9F6EE;
+  padding-left: 35px;
+  transform: translateX(150px);
+  opacity: 0;
+}
+.what-i-do .content .guarantee {
+  display: none;
+}
+
+.prices {
+  background: #F9F6EE;
+  width: 100%;
+  height: 100%;
+}
+.prices.active .text .paragraph {
+  opacity: 0.8 !important;
+  transform: translateY(0) !important;
+}
+.prices.active .flex {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.prices .content {
+  margin: auto;
+  width: 100%;
+  max-width: 1150px;
+  padding: 20px;
+  padding-top: 60px;
+}
+.prices .content .text {
+  text-align: center;
+}
+.prices .content .text .headingp {
+  font-size: 14px;
+  color: #0088F9;
+  opacity: 0.8;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.prices .content .text .heading {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: #183b56;
+  font-size: 37px;
+  font-weight: 800;
+}
+.prices .content .text .heading span {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #0088F9;
+}
+.prices .content .text .paragraph {
   opacity: 0;
   transition: 1s;
   transform: translateY(150px);
 }
-.what-i-do .content .flex {
+.prices .content .flex {
   transition: 1s;
   opacity: 0;
   transform: translateY(150px);
 }
-.what-i-do .content .flex .card {
+.prices .content .flex .card {
   margin-block: 34px;
   height: auto;
   padding: 28px;
@@ -155,38 +208,38 @@
   border: none;
   background: linear-gradient(to top right, #0088F9, #2276b6);
 }
-.what-i-do .content .flex .card:first-child {
+.prices .content .flex .card:first-child {
   margin-top: 0;
 }
-.what-i-do .content .flex .card:last-child {
+.prices .content .flex .card:last-child {
   margin-top: 0;
 }
-.what-i-do .content .flex .card .card-content {
+.prices .content .flex .card .card-content {
   display: flex;
 }
-.what-i-do .content .flex .card .card-content .icon {
+.prices .content .flex .card .card-content .icon {
   width: 25%;
   height: auto;
   display: flex;
   justify-content: center;
 }
-.what-i-do .content .flex .card .card-content .icon i {
+.prices .content .flex .card .card-content .icon i {
   color: #F9F6EE;
   font-size: 32px;
   transform: translateX(-15px);
 }
-.what-i-do .content .flex .card .card-content .card-text {
+.prices .content .flex .card .card-content .card-text {
   width: 75%;
   text-align: left;
   transform: translateX(7px);
 }
-.what-i-do .content .flex .card .card-content .card-text h1 {
+.prices .content .flex .card .card-content .card-text h1 {
   color: #F9F6EE;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.3px;
 }
-.what-i-do .content .flex .card .card-content .card-text p {
+.prices .content .flex .card .card-content .card-text p {
   box-sizing: border-box;
   color: rgba(249, 246, 238, 0.6352941176);
   display: block;
@@ -206,7 +259,7 @@
     transition: 0.2s;
     position: relative;
     overflow: hidden;
-    background: rgba(0, 137, 249, 0.3882352941);
+    background: rgba(0, 137, 249, 0.5882352941);
   }
   .cover .border {
     display: none;
@@ -305,23 +358,38 @@
     transform: translateY(8px);
   }
   .what-i-do {
-    background: #F9F6EE;
+    background: linear-gradient(to bottom, rgba(0, 137, 249, 0.5882352941), rgba(0, 137, 249, 0.6862745098));
     width: 100%;
     height: 100%;
+    padding-top: 0;
+    transform: translateY(80px);
+  }
+  .what-i-do.active .text .paragraph {
+    opacity: 0.8 !important;
+    transform: translateY(0) !important;
+  }
+  .what-i-do.active .guarantee {
+    opacity: 1 !important;
+    transform: translateY(53px) !important;
   }
   .what-i-do .content {
     margin: auto;
     width: 100%;
     max-width: 1150px;
-    padding: 40px 0;
+    padding: 120px 0;
     position: relative;
+    background: unset;
+    border-bottom: unset;
+    border-bottom-left-radius: unset;
+    margin-bottom: 120px;
+    transform: translateY(-40px);
   }
   .what-i-do .content .text {
     text-align: center;
   }
   .what-i-do .content .text .headingp {
-    font-size: 16px;
-    color: #0088F9;
+    font-size: 17px;
+    color: #F9F6EE;
     opacity: 0.8;
     text-transform: uppercase;
     margin-bottom: 7px;
@@ -329,8 +397,8 @@
   .what-i-do .content .text .heading {
     margin-top: 10px;
     margin-bottom: 30px;
-    color: #183b56;
-    font-size: 48px;
+    color: #F9F6EE;
+    font-size: 50px;
     font-weight: 800;
   }
   .what-i-do .content .text .heading br {
@@ -343,15 +411,114 @@
   .what-i-do .content .text .paragraph {
     text-align: center;
     margin: auto;
-    max-width: 40%;
+    max-width: 55%;
+    font-size: 19px;
+    color: #F9F6EE;
+    transform: translateY(150px) translateX(0);
+  }
+  .what-i-do .content .guarantee {
+    width: 90%;
+    max-width: 410px;
+    background: rgba(0, 137, 249, 0.3098039216);
+    border-radius: 14px;
+    height: auto;
+    padding: 28px;
+    display: block;
+    transform: translateY(250px);
+    margin: auto;
+    opacity: 0;
+    transition: 1s;
+  }
+  .what-i-do .content .guarantee:first-child {
+    margin-top: 0;
+  }
+  .what-i-do .content .guarantee:last-child {
+    margin-top: 0;
+  }
+  .what-i-do .content .guarantee .card-content {
+    display: flex;
+  }
+  .what-i-do .content .guarantee .card-content .icon {
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .what-i-do .content .guarantee .card-content .icon i {
+    color: #F9F6EE;
+    font-size: 32px;
+    transform: translateX(-15px);
+  }
+  .what-i-do .content .guarantee .card-content .card-text {
+    width: 75%;
+    text-align: left;
+    transform: translateX(7px);
+  }
+  .what-i-do .content .guarantee .card-content .card-text h1 {
+    color: #F9F6EE;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .what-i-do .content .guarantee .card-content .card-text p {
+    box-sizing: border-box;
+    color: rgba(249, 246, 238, 0.6352941176);
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: auto;
+    line-height: 27px;
+    margin-bottom: 0;
+  }
+  .prices {
+    background: #F9F6EE;
+    width: 100%;
+    height: 100%;
+  }
+  .prices .content {
+    margin: auto;
+    width: 100%;
+    max-width: 1150px;
+    padding: 40px 0;
+    position: relative;
+  }
+  .prices .content .text {
+    text-align: center;
+  }
+  .prices .content .text .headingp {
+    font-size: 16px;
+    color: #0088F9;
+    opacity: 0.8;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+  .prices .content .text .heading {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #183b56;
+    font-size: 48px;
+    font-weight: 800;
+  }
+  .prices .content .text .heading br {
+    display: none;
+  }
+  .prices .content .text .heading span {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #0088F9;
+  }
+  .prices .content .text .paragraph {
+    text-align: center;
+    margin: auto;
+    max-width: 50%;
     font-size: 18px;
   }
-  .what-i-do .content .flex {
+  .prices .content .flex {
     width: 100%;
     max-width: 1150px;
     text-align: center;
   }
-  .what-i-do .content .flex .card {
+  .prices .content .flex .card {
     display: inline-block;
     margin-inline: 34px;
     height: auto;
@@ -360,33 +527,39 @@
     min-width: 400px;
     border-radius: 14px;
     border: none;
+    cursor: pointer;
+    transition: 0.5s;
   }
-  .what-i-do .content .flex .card .card-content {
+  .prices .content .flex .card:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #0088F9, #0088F9);
+  }
+  .prices .content .flex .card .card-content {
     display: flex;
   }
-  .what-i-do .content .flex .card .card-content .icon {
+  .prices .content .flex .card .card-content .icon {
     width: 25%;
     height: auto;
     display: flex;
     justify-content: center;
   }
-  .what-i-do .content .flex .card .card-content .icon i {
+  .prices .content .flex .card .card-content .icon i {
     color: #F9F6EE;
     font-size: 34px;
     transform: translateX(-15px);
   }
-  .what-i-do .content .flex .card .card-content .card-text {
+  .prices .content .flex .card .card-content .card-text {
     width: 75%;
     text-align: left;
     transform: translateX(7px);
   }
-  .what-i-do .content .flex .card .card-content .card-text h1 {
+  .prices .content .flex .card .card-content .card-text h1 {
     color: #F9F6EE;
     font-size: 20px;
     font-weight: 800;
     letter-spacing: 0.3px;
   }
-  .what-i-do .content .flex .card .card-content .card-text p {
+  .prices .content .flex .card .card-content .card-text p {
     box-sizing: border-box;
     color: rgba(249, 246, 238, 0.6352941176);
     display: block;

@@ -42,6 +42,20 @@ function whatIDoScroll(){
         window.location.href='#whatIDo';
 }
 
+function prices(){
+    const navbar = document.getElementById('mobileNav');
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const logo = document.getElementById('logo');
+
+    sidebar.classList.remove('active');
+    hamburger.classList.remove('active');
+    navbar.classList.remove('active');
+    logo.classList.remove('active');
+
+        window.location.href='#prices';
+}
+
 function myWorkScroll(){
     const navbar = document.getElementById('mobileNav');
     const hamburger = document.getElementById('hamburger');

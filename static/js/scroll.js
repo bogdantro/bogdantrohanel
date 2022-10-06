@@ -19,11 +19,41 @@ $(document).ready(function(){
 if ($(window).width() > 1150) {
     $(document).ready(function(){
         $(window).scroll(function(){
+            var x = $("#prices").offset();
+            var height1 = $("#prices").outerHeight();
+            var y = document.documentElement.scrollTop;
+            var z = ((x.top + height1) - y);
+            if(z - 390 < $(window).height()){
+                $('#prices').addClass('active');
+            }else{
+                $('#prices').removeClass('active');
+            }
+        });
+    });
+ }else{
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var x = $("#prices").offset();
+            var height1 = $("#prices").outerHeight();
+            var y = document.documentElement.scrollTop;
+            var z = ((x.top + height1) - y);
+            if(z - 650 < $(window).height()){
+                $('#prices').addClass('active');
+            }else{
+                $('#prices').removeClass('active');
+            }
+        });
+    });    
+ }
+
+if ($(window).width() > 1150) {
+    $(document).ready(function(){
+        $(window).scroll(function(){
             var x = $("#whatIDo").offset();
             var height1 = $("#whatIDo").outerHeight();
             var y = document.documentElement.scrollTop;
             var z = ((x.top + height1) - y);
-            if(z - 390 < $(window).height()){
+            if(z - 120 < $(window).height()){
                 $('#whatIDo').addClass('active');
             }else{
                 $('#whatIDo').removeClass('active');
@@ -37,7 +67,7 @@ if ($(window).width() > 1150) {
             var height1 = $("#whatIDo").outerHeight();
             var y = document.documentElement.scrollTop;
             var z = ((x.top + height1) - y);
-            if(z - 680 < $(window).height()){
+            if(z - 85 < $(window).height()){
                 $('#whatIDo').addClass('active');
             }else{
                 $('#whatIDo').removeClass('active');
