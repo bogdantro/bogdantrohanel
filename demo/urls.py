@@ -4,11 +4,7 @@ from django.conf.urls.static import *
 from django.conf import *
 from django.contrib import admin
 
-urlpatterns = [
-    # Django Jet Admin
-    path('jet/', include('jet.urls', 'jet')), 
-    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')), 
-    
+urlpatterns = [    
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     # Pages
