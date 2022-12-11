@@ -2,33 +2,16 @@
 .cover{
     width: 100%;
     height: 700;
-    min-height: 100vh;
+    height: 650px;
     transition: 2s; 
     position: relative;
-    .border{
-        width: 80%;
-        height: 5px;
-        background: #0088F9;
-        display: block;
-        position: absolute;
-        top: 85vh;
-        left: 50%;
-        transform: translateX(-50%) translateY(150px);
-        border-radius: 20px;
-        opacity: 0;
-        transition: .4s;
-        &.active{
-            opacity: 1;
-            transform: translateY(0) translateX(-50%);
-        }
-    }
     .des-cover-actions{
         display: none;
     }
     .content{
         width: 100%;
         height: max-content;
-        padding-inline: 20px;
+        padding-inline: 30px;
         padding-top: 98px;
         padding-bottom: 55px;
         position: relative;
@@ -75,26 +58,31 @@
         }
     }
     .mob-cover-actions{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         transition: .4s;
         opacity: 0;
         transform: translateY(190px);
+        padding-inline: 30px;
         &.active{
             opacity: 1;
             transform: translateY(45px);
         }
         button{
-            margin-inline: 10px;
+            display: block;
+            width: 100%;
+            padding-block: 15px;
+            margin-block: 35px;
             &:first-child{
-                margin-left: 0;
+                margin-top: 0;
+            }
+            &:last-child{
+                margin-bottom: 0;
             }
         }
     }
 } 
+
+// What I do
 .what-i-do{
-    background: #F9F6EE;
     width: 100%;
     height: 100%;
     &.active{
@@ -104,16 +92,19 @@
                 transform: translateX(0) !important;
             }
         }
+        .guarantee{
+            opacity: 1 !important;
+            transform: translateX(0px) !important;
+        }
     }
     .content{
         margin: auto;
         width: 100%;
         max-width: 1150px;
-        padding: 40px 0;
+        padding: 40px 5px;
+        padding-bottom: 65px;
         position: relative;
-        background: linear-gradient(to left, #279eff, #0088F9);
-        border-bottom: 10px solid transparent;
-        border-bottom-left-radius: 43%;
+        background: linear-gradient(to bottom, #279eff, #0088F9);
         .text{
             text-align: center;
             .headingp{
@@ -128,30 +119,81 @@
                 margin-bottom: 25px;
                 color: #F9F6EE;
                 font-size: 37px;
-                font-weight: 800;
                 padding-inline: 15px;
-                span{
-                    padding-bottom: 5px;
-                    border-bottom: 2px solid #0088F9;
-                }
             }
             .paragraph{
                 transition: 1s;
                 color: #F9F6EE;
-                padding-left: 35px;
                 transform: translateX(150px);
                 opacity: 0;
+                padding-inline: 20px;
             }
         }
         .guarantee{
-            display: none;
+            width: 90%;
+            max-width: 410px;
+            background: #34a4ff70;
+            border-radius: 14px;
+            height: auto;
+            padding: 28px;
+            display: block;
+            transform: translateX(150px);
+            margin: auto;
+            position: relative;
+            top: 30px;
+            opacity: 0;
+            transition: 1s;
+            &:first-child{
+                margin-top: 0;
+            }
+            &:last-child{
+                margin-top: 0;
+            }
+            .card-content{
+              display: flex;
+              .icon{
+                width: 25%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                i{
+                  color: #F9F6EE;
+                  font-size: 32px;
+                  transform: translateX(-15px);
+                }
+              }
+              .card-text{
+                width: 75%;
+                text-align: left;
+                transform: translateX(7px);
+                h1{
+                  color: #F9F6EE;
+                  font-size: 18px;
+                  font-weight: 800;
+                  letter-spacing: 0.3px; 
+                }
+                p{
+                  box-sizing: border-box;
+                  color: #f9f6eea2;
+                  display: block;
+                  font-family: Inter, sans-serif;
+                  font-size: 16px;
+                  font-weight: 400;
+                  height: auto;
+                  line-height: 27px;
+                  margin-bottom: 0;
+                }
+              }
+            }
         }
     }  
 }   
+
+// Prices
 .prices{
-    background: #F9F6EE;
     width: 100%;
     height: 100%;
+    padding-bottom: 15px;
     &.active{
         .text{
             .paragraph{
@@ -184,7 +226,6 @@
                 margin-bottom: 25px;
                 color: #183b56;
                 font-size: 37px;
-                font-weight: 800;
                 span{
                     padding-bottom: 5px;
                     border-bottom: 2px solid #0088F9;
@@ -194,26 +235,29 @@
                 opacity: 0;
                 transition: 1s;
                 transform: translateY(150px);
+                padding-top: 4px;
             }
         }
         .flex{
             transition: 1s;
             opacity: 0;
             transform: translateY(150px);
+            padding-top: 2px;
             .card{
-                margin-block: 34px;
+                margin-block: 40px;
                 height: auto;
-                padding: 28px;
+                padding: 35px 28px;
                 width: 100%;
                 max-width: 400px;
                 border-radius: 14px;
                 border: none;
+                box-shadow: 1px 3px 6px rgba(15,15,15,0.45);
                 background: linear-gradient(to top right, #0088F9, #2276b6 );
                 &:first-child{
                     margin-top: 0;
                 }
                 &:last-child{
-                    margin-top: 0;
+                    margin-bottom: 0;
                 }
                 .card-content{
                   display: flex;
@@ -255,6 +299,8 @@
         }
     }
 }
+
+// #1 breakpoint
 @media only screen and (min-device-width: 1150px) {
     .cover{
         width: 100%;

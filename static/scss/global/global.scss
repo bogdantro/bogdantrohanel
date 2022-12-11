@@ -15,7 +15,7 @@ $loader: rgb(80, 104, 180);
       display: none;  /* Safari and Chrome */
   } 
    html, body {
-    background-color: #F9F6EE !important;
+    background-color: white !important;
     overflow-x: hidden;
     scroll-behavior: smooth;
     margin: 0 auto;
@@ -61,10 +61,8 @@ button{
   cursor: pointer !important;
   outline: none !important;
   text-align: center !important;
-  font-size: 15px !important;
+  font-size: 16px !important;
   border-radius: 4px !important;
-  height: 47px !important;
-  width: 135px !important;
   transition: .6s !important;
   &.primary{
     background: #1493fa;

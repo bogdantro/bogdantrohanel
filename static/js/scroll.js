@@ -67,7 +67,7 @@ if ($(window).width() > 1150) {
             var height1 = $("#whatIDo").outerHeight();
             var y = document.documentElement.scrollTop;
             var z = ((x.top + height1) - y);
-            if(z - 85 < $(window).height()){
+            if(z -205 < $(window).height()){
                 $('#whatIDo').addClass('active');
             }else{
                 $('#whatIDo').removeClass('active');
